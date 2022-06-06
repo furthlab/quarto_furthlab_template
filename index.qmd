@@ -1,0 +1,110 @@
+---
+title: "Put your title here<br/><h1>🧬🔬<br/> </h1>"
+subtitle: "Your name<br />  <font size='5'>Fürth lab, Uppsala University</font><br><img src='images/logos-01.svg'>"
+format:
+  revealjs: 
+    slide-number: true
+    theme: mytheme
+    chalkboard: 
+      buttons: false
+    preview-links: auto
+    css: styles.css
+    footer: "<i class='fa fa-calendar' aria-hidden='true'></i> May 9, 15:15 - 16:00 | <i class='fa fa-map-marker' aria-hidden='true'></i> Location, Institution, City | 
+ <i class='fa fa-user'></i> name of conference/lab meeting"
+resources:
+  - demo.pdf
+---
+
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+library(fontawesome)
+```
+
+## This is a standard slide.
+
+Here you can add some text. Next slide starts with the hash symbol to mark its title.
+
+## 🗣 Content
+
+This is what will be discussed today.
+
+Always good to explain the agenda so audience can have clear expectations. 
+
+::: {.fragment .fade}
+<h3>Therse are animated bullet points:</h3>
+
+- &nbsp;&nbsp;   📜 Point one
+- &nbsp;&nbsp;   🧫 Point two
+- &nbsp;&nbsp;   🚀 Point three
+::: 
+
+::: {.fragment .fade}
+...You can use [Font Awesome](https://fontawesome.com/) symbols as well `r fa("font-awesome", fill = "steelblue")`.
+::: 
+
+## <span style="top: 50%;      -webkit-transform: translate(0, -50%);      position: absolute;">📜 You can also have a slide with a webiste embedded</span>
+
+::: footer
+:::
+
+## {background-iframe="https://www.uu.se/en" background-interactive="true" background-size="contain"}
+
+::: footer
+:::
+
+## <span style="top: 50%;      -webkit-transform: translate(0, -50%);      position: absolute;">📜 Background</span>
+
+::: footer
+:::
+
+
+## 📜 Some background
+
+<style>
+.container{
+  display: flex;
+}
+.col {
+  flex: 1;
+}
+</style>
+
+
+::: {.container}
+:::: {.col}
+This is a two column container when you want text next to an image.
+
+<center>
+<figure>
+    <img src="https://www.bioc.cam.ac.uk/sites/www.bioc.cam.ac.uk/files/styles/leading/public/7_frederick_sanger.jpg" style="border-radius: 10px; height: 25%;">
+    <figcaption>Caption: Fred Sanger having a drink</figcaption>
+</figure>
+</center>
+
+
+
+::::
+:::: {.col}
+<img src="images/sequence_autorad_85.jpeg" style="height: 600px; margin-top: -20px;"></img>
+::::
+:::
+
+::: footer
+`r fa("book", fill = "steelblue")` [Sanger et al. 1977 _PNAS_](https://doi.org/10.1073/pnas.74.12.5463)
+:::
+
+## Citations
+
+Add your references by specifying the footer like this:
+
+```
+::: footer
+r fa("book", fill = "steelblue") [Sanger et al. 1977 _PNAS_](https://doi.org/10.1073/pnas.74.12.5463)
+:::
+```
+Then a link will display the citation in the footer next to the book icon `r fa("book", fill = "steelblue")`.
+
+In this case a paper from Fred Sanger published in _PNAS_ 1977.
+
+::: footer
+`r fa("book", fill = "steelblue")` [Sanger et al. 1977 _PNAS_](https://doi.org/10.1073/pnas.74.12.5463)
+:::
