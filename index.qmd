@@ -1,8 +1,12 @@
 ---
-title: "Put your title here<h1>🧬🔬</h1>"
+title: "Your title here<h1>🧬🔬</h1>"
 subtitle: "Your name <br> 
 <font size='5'>Fürth lab, Uppsala University</font>
 <br><img src='images/logos-01.svg'>"
+# format:
+#   pptx:
+#     reference-doc: template.pptx #uncomment and comment format: revealjs: block to make powerpoint
+# format: pdf
 format:
   revealjs: 
     slide-number: true
@@ -13,8 +17,6 @@ format:
     footer: "<i class='fa fa-calendar' aria-hidden='true'></i> May 9, 15:15 - 16:00 | 
     <i class='fa fa-map-marker' aria-hidden='true'></i> Location, Institution, City | 
  <i class='fa fa-user'></i> name of conference/lab meeting"
-resources:
-  - demo.pdf
 highlight-style: vscode.theme
 ---
 
@@ -23,11 +25,39 @@ if(!require(fontawesome)){
   install.packages('fontawesome')
   library(fontawesome)
 }
+if(!require(rsvg)){
+  install.packages('rsvg')
+  library(rsvg)
+}
 ```
 
 ## This is a standard slide.
 
 Here you can add some text. Next slide starts with the hash symbol to mark its title.
+
+
+## Columns
+
+:::: {.columns}
+::: {.column width="30%"}
+- Topic 2
+   - Level 1
+   - Level 2
+   - Level 3
+:::
+::: {.column width="30%"}
+- Topic 3
+   - Level 1
+   - Level 2
+   - Level 3
+:::
+::: {.column width="30%"}
+- Topic 4
+   - Level 1
+   - Level 2
+   - Level 3
+:::
+::::
 
 ## 🗣 Content
 
@@ -46,6 +76,7 @@ Always good to explain the agenda so audience can have clear expectations.
 ::: {.fragment .fade}
 ...You can use [Font Awesome](https://fontawesome.com/) symbols as well `r fa("font-awesome", fill = "steelblue")`.
 ::: 
+
 
 ## Slide with a table
 
@@ -74,6 +105,7 @@ Links like this 👆 are written by this code:
 ```
 [text to display](https://www.google.com/)
 
+
 # Code blocks
 
 Here is some code for a plot in R:
@@ -95,6 +127,7 @@ plot(x, y,
 )
 ```
 
+
 # Code blocks
 
 Here is some R code executed:
@@ -106,6 +139,7 @@ y <- c(2, 4, 6, 8, 10)
 # Create a scatter plot using Base R plot function
 plot(x, y,  type = "p", col = "blue", pch = 16, cex = 2, xlab = "X-axis Label",  ylab = "Y-axis Label",  main = "Scatter Plot Example" )
 ```
+
 
 # Code blocks
 
@@ -119,10 +153,44 @@ y <- c(2, 4, 6, 8, 10)
 plot(x, y,  type = "p", col = "blue", pch = 16, cex = 2, xlab = "X-axis Label",  ylab = "Y-axis Label",  main = "Scatter Plot Example" )
 ```
 
+
+# Statistics in text
+
+:::: {.columns}
+
+::: {.column width="40%"}
+I have some R code:
+```{r echo=TRUE}
+data <- rnorm(100, 50, 15)
+hist(data)
+```
+:::
+
+::: {.column width="60%"}
+The mean is:
+
+- `r mean(data)` 
+
+The standard reviation is:
+
+- `r sd(data)`
+
+And if I use `round()`:
+
+- `r round(mean(data), 2)` 
+- `r round(sd(data), 2)`
+
+:::
+
+::::
+
+
 ## <span style="top: 50%;      -webkit-transform: translate(0, -50%);      position: absolute;">📜 You can also have a slide with a webiste embedded</span>
 
 ::: footer
 :::
+
+---
 
 ## {background-iframe="http://www.wikipedia.com" background-interactive="true" background-size="contain"}
 
@@ -134,18 +202,9 @@ plot(x, y,  type = "p", col = "blue", pch = 16, cex = 2, xlab = "X-axis Label", 
 ::: footer
 :::
 
+---
 
 ## 📜 Some background
-
-<style>
-.container{
-  display: flex;
-}
-.col {
-  flex: 1;
-}
-</style>
-
 
 ::: {.container}
 :::: {.col}
@@ -169,6 +228,7 @@ This is a two column container when you want text next to an image.
 ::: footer
 `r fa("book", fill = "steelblue")` [Sanger et al. 1977 _PNAS_](https://doi.org/10.1073/pnas.74.12.5463)
 :::
+
 
 ## Citations
 

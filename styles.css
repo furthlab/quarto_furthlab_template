@@ -22,6 +22,16 @@
     font-size: 18px;
   }
   
+  .reveal code {
+    color: #784d5d
+  }
+
+  .container{
+    display: flex;
+  }
+  .col {
+    flex: 1;
+  }
 
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
