@@ -1,3 +1,28 @@
+/* Styling for code blocks */
+.reveal pre code {
+    background-color: #2b2b2b; /* Dark gray background color */
+    color: #f8f8f8; /* Light text color */
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  /* Styling for code block syntax highlighting */
+  .reveal pre code span.token.comment {
+    color: #75715e; /* Gray for comments */
+  }
+  
+  .reveal pre code span.token.keyword {
+    color: #f92672; /* Pink for keywords */
+  }
+  
+  /* Add other syntax highlighting colors as per your preference */
+  
+  /* Adjust font size for code */
+  .reveal pre code {
+    font-size: 18px;
+  }
+  
+
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)

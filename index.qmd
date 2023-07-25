@@ -1,22 +1,28 @@
 ---
-title: "Put your title here<br/><h1>🧬🔬<br/> </h1>"
-subtitle: "Your name<br />  <font size='5'>Fürth lab, Uppsala University</font><br><img src='images/logos-01.svg'>"
+title: "Put your title here<h1>🧬🔬</h1>"
+subtitle: "Your name <br> 
+<font size='5'>Fürth lab, Uppsala University</font>
+<br><img src='images/logos-01.svg'>"
 format:
   revealjs: 
     slide-number: true
-    theme: mytheme
     chalkboard: 
       buttons: false
     preview-links: auto
     css: styles.css
-    footer: "<i class='fa fa-calendar' aria-hidden='true'></i> May 9, 15:15 - 16:00 | <i class='fa fa-map-marker' aria-hidden='true'></i> Location, Institution, City | 
+    footer: "<i class='fa fa-calendar' aria-hidden='true'></i> May 9, 15:15 - 16:00 | 
+    <i class='fa fa-map-marker' aria-hidden='true'></i> Location, Institution, City | 
  <i class='fa fa-user'></i> name of conference/lab meeting"
 resources:
   - demo.pdf
+highlight-style: vscode.theme
 ---
 
 ```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
-library(fontawesome)
+if(!require(fontawesome)){
+  install.packages('fontawesome')
+  library(fontawesome)
+}
 ```
 
 ## This is a standard slide.
@@ -41,12 +47,84 @@ Always good to explain the agenda so audience can have clear expectations.
 ...You can use [Font Awesome](https://fontawesome.com/) symbols as well `r fa("font-awesome", fill = "steelblue")`.
 ::: 
 
+## Slide with a table
+
+Using Markdown you can also write tables
+
+| Reagent                   | Volume      | Final Concentration |
+|---------------------------|-------------|---------------------|
+| Sterile water or NF-water | 840 µl      |                     |
+| 10xPBS                    | 100 µl      | 1x                  |
+| 10% Tween-20              | 10 µl       | 0.1% Tween-20       |
+| 10% BSA                   | 50 µl       | 1% BSA              |
+| **TOTAL:**                | **1000 µl** |                     |
+
+I recommend the online Markdown table generator:
+[https://www.tablesgenerator.com/markdown_tables](https://www.tablesgenerator.com/markdown_tables)
+
+
+# Links
+
+I recommend the online Markdown table generator:
+[https://www.tablesgenerator.com/markdown_tables](https://www.tablesgenerator.com/markdown_tables)
+
+Links like this 👆 are written by this code:
+```
+[text to display](https://www.google.com/)
+```
+[text to display](https://www.google.com/)
+
+# Code blocks
+
+Here is some code for a plot in R:
+
+```r
+# Sample data
+x <- c(1, 2, 3, 4, 5)
+y <- c(2, 4, 6, 8, 10)
+
+# Create a scatter plot using Base R plot function
+plot(x, y, 
+     type = "p",          # 'p' for points
+     col = "blue",        # Point color
+     pch = 16,            # Point shape (16 for filled circles)
+     cex = 2,             # Point size
+     xlab = "X-axis Label",  # X-axis label
+     ylab = "Y-axis Label",  # Y-axis label
+     main = "Scatter Plot Example"  # Main title
+)
+```
+
+# Code blocks
+
+Here is some R code executed:
+
+```{r echo=TRUE}
+# Sample data
+x <- c(1, 2, 3, 4, 5)
+y <- c(2, 4, 6, 8, 10)
+# Create a scatter plot using Base R plot function
+plot(x, y,  type = "p", col = "blue", pch = 16, cex = 2, xlab = "X-axis Label",  ylab = "Y-axis Label",  main = "Scatter Plot Example" )
+```
+
+# Code blocks
+
+Here is some R code executed without `echo=TRUE`:
+
+```{r}
+# Sample data
+x <- c(1, 2, 3, 4, 5)
+y <- c(2, 4, 6, 8, 10)
+# Create a scatter plot using Base R plot function
+plot(x, y,  type = "p", col = "blue", pch = 16, cex = 2, xlab = "X-axis Label",  ylab = "Y-axis Label",  main = "Scatter Plot Example" )
+```
+
 ## <span style="top: 50%;      -webkit-transform: translate(0, -50%);      position: absolute;">📜 You can also have a slide with a webiste embedded</span>
 
 ::: footer
 :::
 
-## {background-iframe="https://www.uu.se/en" background-interactive="true" background-size="contain"}
+## {background-iframe="http://www.wikipedia.com" background-interactive="true" background-size="contain"}
 
 ::: footer
 :::
