@@ -33,21 +33,23 @@ if(!require(rsvg)){
 
 ## This is a standard slide.
 
-Here you can add some text. Next slide starts with the hash symbol to mark its title.
+Here you can add some text. Next slide starts with the hash symbol (`## Title`) to mark its title.
 
 
 ```{r echo=FALSE}
-var <- rnorm(100)
+var <- rnorm(100) #code not shown but executed
 ```
 
 ```{r echo=FALSE}
-plot(var)
+plot(var)  #code executed but not shown
 ```
 
 ```{python echo=TRUE}
-import numpy
-var = "hej hej hej"
-print(var)
+import numpy as np #works with python as well
+numbers = [10, 20, 30, 40, 50]
+arr = np.array(numbers)
+mean = np.mean(arr)
+print("Mean:", mean)
 ```
 
 ## Columns
@@ -62,7 +64,7 @@ print(var)
 ::: {.column width="30%"}
 - Topic 3
    - Level 1
-      - Lebel 4
+      - Sublevel 4
    - Level 2
    - Level 3
 :::
@@ -185,7 +187,7 @@ The mean is:
 
 - `r mean(data)` 
 
-The standard reviation is:
+The standard deviation is:
 
 - `r sd(data)`
 
@@ -199,7 +201,7 @@ And if I use `round()`:
 ::::
 
 
-## <span style="top: 50%;      -webkit-transform: translate(0, -50%);      position: absolute;">📜 You can also have a slide with a webiste embedded</span>
+## <span style="top: 50%;      -webkit-transform: translate(0, -50%);      position: absolute;">📜 You can also have a slide with a website embedded</span>
 
 ::: footer
 :::
@@ -211,14 +213,14 @@ And if I use `round()`:
 ::: footer
 :::
 
-## <span style="top: 50%;      -webkit-transform: translate(0, -50%);      position: absolute;">📜 Background</span>
+## <span style="top: 50%;      -webkit-transform: translate(0, -50%);      position: absolute;">📜 Just a title slide</span>
 
 ::: footer
 :::
 
 ---
 
-## 📜 Some background
+## 📜 Two-column image/text slide
 
 ::: {.container}
 :::: {.col}
