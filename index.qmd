@@ -1,6 +1,6 @@
 ---
 title: "Your title here<h1>🧬🔬</h1>"
-subtitle: "Your name <br> 
+subtitle: "Daniel Fürth <br> 
 <font size='5'>Fürth lab, Uppsala University</font>
 <br><img src='images/logos-01.svg'>"
 # format:
@@ -36,6 +36,20 @@ if(!require(rsvg)){
 Here you can add some text. Next slide starts with the hash symbol to mark its title.
 
 
+```{r echo=FALSE}
+var <- rnorm(100)
+```
+
+```{r echo=FALSE}
+plot(var)
+```
+
+```{python echo=TRUE}
+import numpy
+var = "hej hej hej"
+print(var)
+```
+
 ## Columns
 
 :::: {.columns}
@@ -48,6 +62,7 @@ Here you can add some text. Next slide starts with the hash symbol to mark its t
 ::: {.column width="30%"}
 - Topic 3
    - Level 1
+      - Lebel 4
    - Level 2
    - Level 3
 :::
@@ -126,7 +141,6 @@ plot(x, y,
      main = "Scatter Plot Example"  # Main title
 )
 ```
-
 
 # Code blocks
 
@@ -337,7 +351,7 @@ Learn more: [Media Backgrounds](https://quarto.org/docs/presentations/revealjs/#
 
 Position images or other elements at precise locations
 
-![](./images/kitten-450-250.jpeg){.absolute .fragment top="150" right="80" width="450"}
+![](./images/kitten-450-250.jpeg){.absolute .fragment top="150" right="80" width="450"} 
 
 ![](./images/kitten-300-200.jpeg){.absolute .fragment bottom="110" left="120" width="300"}
 
@@ -369,7 +383,7 @@ Learn more: [Auto-Animate](https://quarto.org/docs/presentations/revealjs/advanc
 Automatically animate matching elements across slides with Auto-Animate.
 
 ::: r-stack
-::: {data-id="box1" style="background: #2780e3; width: 350px; height: 350px; border-radius: 200px;"}
+::: {data-id="box1" style="background: orange; width: 350px; height: 350px; border-radius: 200px;"}
 :::
 
 ::: {data-id="box2" style="background: #3fb618; width: 250px; height: 250px; border-radius: 200px;"}
